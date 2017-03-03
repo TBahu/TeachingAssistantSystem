@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TeachingAssistantSystem</display-name>
+	<filter>
+		<filter-name>AllCharacterEncodingFilter</filter-name>
+		<filter-class>ustc.sse.sa16225300.filter.AllCharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AllCharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+    	<filter-name>LoginFilter</filter-name>
+    	<filter-class>ustc.sse.sa16225300.filter.LoginFilter</filter-class>
+	</filter>
+ 	<filter-mapping>
+   		<filter-name>LoginFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>ustc.sse.sa16225300.web.controller.AdminServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FileServlet</servlet-name>
+    <servlet-class>ustc.sse.sa16225300.web.controller.FileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>NoticeServlet</servlet-name>
+    <servlet-class>ustc.sse.sa16225300.web.controller.NoticeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GradeServlet</servlet-name>
+    <servlet-class>ustc.sse.sa16225300.web.controller.GradeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>ustc.sse.sa16225300.web.controller.UserServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/servlet/AdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileServlet</servlet-name>
+    <url-pattern>/servlet/FileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NoticeServlet</servlet-name>
+    <url-pattern>/servlet/NoticeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GradeServlet</servlet-name>
+    <url-pattern>/servlet/GradeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/servlet/UserServlet</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <error-page> 
+        <error-code>404</error-code> 
+        <location>/common/404error.jsp</location> 
+  </error-page> 
+  <error-page> 
+        <error-code>500</error-code> 
+        <location>/common/500error.jsp</location> 
+  </error-page>
+  <error-page> 
+        <error-code>403</error-code> 
+        <location>/common/403error.jsp</location> 
+  </error-page>
+  
+</web-app>
